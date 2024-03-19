@@ -62,7 +62,7 @@ class BadgeDelHandler extends Handler {
 // Hydro会在服务初始化完成后调用该函数。
 async function apply() {
     //展示所有有徽章的用户
-    Route('badge_show', '/badge', BadgeShowHandler, PRIV.PRIV_USER_PROFILE);
+    Route('badge_show', '/badge', BadgeShowHandler, PRIV.PRIV_CREATE_DOMAIN);
     //新建/修改、管理/删除徽章
     Route('badge_create', '/badge/create', BadgeCreateHandler, PRIV.PRIV_CREATE_DOMAIN);
     Route('badge_manage', '/badge/manage', BadgeManageHandler, PRIV.PRIV_CREATE_DOMAIN);
